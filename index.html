@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Sorteio</title>
+   <style>
+      h1{
+         color: #fff;
+      }
+
+      body{
+         font-family: Arial, Helvetica, sans-serif;
+         text-align: center;
+         background: rgb(14, 148, 211);
+      }
+      button{
+         cursor: pointer;
+      }
+      #lista{
+         text-align: center;
+      }
+      .bloco{
+         display: flex;
+         flex-direction: column;
+         max-width: 600px;
+         margin: 0 auto;
+         background: #fff;
+         padding: 25px;
+         border-radius: 5px;
+         box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.6);
+      }
+      #lista{
+         margin-bottom: 20px;
+      }
+      .campoAdd input{
+         width: 70%;
+         float: left;
+      }
+      .campoAdd button{
+         width: 26%;
+         float: right;
+      }
+      
+      #txt{
+         font-size: 2rem;
+         text-transform: uppercase;
+      }
+      @media (max-width: 480px) {
+         .bloco{
+            padding: 15px;
+         }
+      }
+   </style>
+</head>
+<body>
+   <h1>Sorteador Online</h1>
+   
+   <div class="bloco">
+
+      <select name="lista" id="lista" multiple>
+         <option style="font-weight: bolder">Adicione pessoas para o sorteio:</option>
+      </select>
+
+      <div class="campoAdd">
+         <input type="text" name="nome" id="nome" placeholder="Digite o nome do participante">
+         <button id="add">
+            Adicionar
+         </button>
+      </div>
+
+      <p>Aperte no botão abaixo para sortear</p>
+
+      <button id="btn">
+         Sortear
+      </button>
+
+      <p id="txt"></p>
+
+   </div>
+
+   <script src="script.js"></script>
+</body>
+</html>
